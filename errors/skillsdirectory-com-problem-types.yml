@@ -1,0 +1,13 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.skillsdirectory.com/api-docs
+format: '{ "error": { "code": "NOT_FOUND", "message": "..." } }'
+problems:
+- {status: 400, code: MISSING_PARAMETER, title: Required parameter missing}
+- {status: 401, code: MISSING_API_KEY, title: No API key provided}
+- {status: 401, code: INVALID_API_KEY, title: Invalid or expired key}
+- {status: 403, code: TIER_RESTRICTED, title: Endpoint requires higher tier}
+- {status: 404, code: NOT_FOUND, title: Resource not found}
+- {status: 429, code: RATE_LIMIT_EXCEEDED, title: Daily limit reached}
+- {status: 409, code: null, title: 'Scan: a ZIP or repo with several skills returns 409 with their folders'}
+- {status: 422, code: null, title: 'Scan: grade worse than fail_below'}

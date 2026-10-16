@@ -1,0 +1,120 @@
+# Skills Directory
+
+> The security-first directory of skills for Claude, Claude Code, and coding agents. Every listed skill is automatically security-scanned and graded A–F before it appears, so people and agents can filter to safe, vetted skills. Free, no login required.
+
+- 650,507 indexed skills, 650,507 security-scanned
+- Grade distribution: A: 626,413 · B: 15,441 · C: 5,240 · D: 2,110 · F: 1,303
+- What makes this directory different: every skill gets an automated multi-rule security scan (credential reads, network exfiltration patterns, unpinned remote code, prompt-injection vectors) and a public grade with a per-skill report. Sponsors can never buy grades or hide findings.
+
+## Key pages
+
+- [Home](https://www.skillsdirectory.com/): search the full catalog
+- [Browse skills](https://www.skillsdirectory.com/skills): all skills, filterable by security grade and category
+- [Security](https://www.skillsdirectory.com/security): how scanning works, live scan stats
+- [Security methodology](https://www.skillsdirectory.com/security/methodology): the full rule set behind the A–F grades
+- [Security badges](https://www.skillsdirectory.com/security/badges): embeddable live security-grade badges for skill authors
+- [Categories](https://www.skillsdirectory.com/categories): skills by category
+- [Learn](https://www.skillsdirectory.com/learn): guides, comparisons, and security advice
+- [Submit a skill](https://www.skillsdirectory.com/submit): add your skill to the index (it will be scanned)
+- [Report / removal](https://www.skillsdirectory.com/report): authors can request removal or correction of their listing
+- [Advertise](https://www.skillsdirectory.com/advertise): sponsor the directory
+- [Sponsorship pricing](https://www.skillsdirectory.com/pricing.md): machine-readable placements, pricing, and ad policy
+
+## API for agents
+
+Unlike other skill directories, Skills Directory has a public API. Agents can query the catalog directly:
+
+- [API documentation](https://www.skillsdirectory.com/api-docs): full reference
+- Search with a security filter: `GET https://www.skillsdirectory.com/api/v1/skills?q=<query>&securityGrade=A`
+- Registry endpoint for installers: `GET https://www.skillsdirectory.com/api/registry/<slug>`
+- Install any listed skill with the skills CLI: `npx -y skills add <owner>/<repo> --skill <name> --agent claude-code` (the exact command is shown on each skill page)
+- Live security-grade badge (SVG): `GET https://www.skillsdirectory.com/api/skills/<slug>/badge`
+
+## Documentation
+
+- [What are Claude Skills?](https://www.skillsdirectory.com/docs/what-are-claude-skills): A complete beginner's guide to understanding Claude Skills
+- [Getting started with Claude Skills](https://www.skillsdirectory.com/docs/getting-started): Install your first Claude skill in under 2 minutes with safe setup, verification, and first-skill examples.
+- [Skills vs MCP](https://www.skillsdirectory.com/docs/skills-vs-mcp): Understand the difference between skills and MCP servers
+- [Installing skills](https://www.skillsdirectory.com/docs/installing-skills): Install Claude skills in Claude.ai and Claude Desktop (upload a ZIP or SKILL.md) or in Claude Code with one command. Step by step, updated September 2026.
+- [Creating your first skill](https://www.skillsdirectory.com/docs/creating-your-first-skill): Step-by-step guide to creating a SKILL.md file
+- [Writing effective skills](https://www.skillsdirectory.com/docs/writing-effective-skills): Best practices for creating powerful, reusable skills
+- [Skill file structure](https://www.skillsdirectory.com/docs/skill-file-structure): Understanding the anatomy of a skill folder
+- [Using reference files](https://www.skillsdirectory.com/docs/using-reference-files): How to organize and use reference documentation
+- [SKILL.md format](https://www.skillsdirectory.com/docs/skill-md-format): Complete specification for the SKILL.md file format
+- [Registry API](https://www.skillsdirectory.com/docs/registry-api): API documentation for the Skills Directory registry
+- [What is DSPy?](https://www.skillsdirectory.com/docs/what-is-dspy): Understanding DSPy and the GEPA optimizer
+
+## Learn
+
+- [Claude Skills Directories Compared](https://www.skillsdirectory.com/learn/claude-skills-directories-compared): Compare Skills Directory, ClaudSkills, agentskill.sh, Claude Code Marketplace, Anthropic skills, and awesome lists by scale, curation, security, and monetizati…
+- [Claude Skills vs MCP Servers](https://www.skillsdirectory.com/learn/claude-skills-vs-mcp-servers): Understand the difference between Claude Skills and MCP servers, when to use each, and why strong agent setups often use both.
+- [How to Install Claude Skills](https://www.skillsdirectory.com/learn/how-to-install-claude-skills): Learn the common ways to install Claude Skills for Claude Code and Claude.ai, plus the checks to run before trusting a new skill.
+- [How to Write a SKILL.md File](https://www.skillsdirectory.com/learn/how-to-write-a-skill-md): A practical guide to creating a focused SKILL.md file with useful frontmatter, clear triggers, safe instructions, and examples.
+- [What Are Claude Skills?](https://www.skillsdirectory.com/learn/what-are-claude-skills): A plain-English guide to Claude Skills, SKILL.md files, and how reusable agent workflows help Claude and Claude Code work more consistently.
+
+## Blog
+
+- [Are Claude Skills Safe? What Scanning 103,619 of Them Taught Us](https://www.skillsdirectory.com/blog/are-claude-skills-safe): Mostly, yes. We ran 103,619 skills through static analysis: 86.2% had zero findings and 3.8% carry a critical-capability finding. How to check one yourself.
+- [Claude Skills Statistics (September 2026): How Many Skills Are There?](https://www.skillsdirectory.com/blog/claude-skills-statistics): As of September 2, 2026, the Skills Directory index contains 111,810 active Claude skills: totals, growth, where skills live, categories, and security grades.
+- [Nano Banana Claude Skill: Which Version to Install (All Variants Compared)](https://www.skillsdirectory.com/blog/nano-banana-claude-skill): The nano banana skill lets Claude generate and edit images with Google's Gemini image models. We compare the variants we index and pick one to install.
+- [We Scanned 103,619 Claude Skills for Security Issues. Here's What We Found.](https://www.skillsdirectory.com/blog/claude-skills-security-report): We scanned 103,619 Claude skills from 5,316 public GitHub repositories with 36 rules and 120 detection patterns. Here's what the ecosystem looks like.
+- [What is DSPy? The End of Prompt Engineering (And Why GEPA Changes Everything)](https://www.skillsdirectory.com/blog/what-is-dspy): DSPy is a framework from Stanford NLP that lets you program language models instead of prompting them, and GEPA is its newest optimizer.
+- [What Are Claude Skills? A Complete Beginner's Guide](https://www.skillsdirectory.com/blog/what-are-claude-skills): Claude Skills are reusable instruction packages that teach Claude specialized workflows and domain expertise. What they are and how they work.
+
+## Most-installed skills (all Security Grade A)
+
+- [Arena](https://www.skillsdirectory.com/skills/shrimpwtf-arena) — Security Grade A
+- [Pixel Art Creator](https://www.skillsdirectory.com/skills/willibrandon-pixel-art-creator) — Security Grade A
+- [Markitdown](https://www.skillsdirectory.com/skills/k-dense-ai-markitdown) — Security Grade A
+- [Human Writing](https://www.skillsdirectory.com/skills/pr-pm-human-writing) — Security Grade A
+- [Scientific Writing](https://www.skillsdirectory.com/skills/hxk622-scientific-writing) — Security Grade A
+- [Scientific Reviewer](https://www.skillsdirectory.com/skills/jkitchin-scientific-reviewer) — Security Grade A
+- [Mermaid Diagrams](https://www.skillsdirectory.com/skills/veelenga-mermaid-diagrams) — Security Grade A
+- [managing-google-sheets](https://www.skillsdirectory.com/skills/gmickel-managing-google-sheets) — Security Grade A
+- [Flowchart Creator](https://www.skillsdirectory.com/skills/mhattingpete-flowchart-creator) — Security Grade A
+- [Deep Research](https://www.skillsdirectory.com/skills/openclaw-deep-research) — Security Grade A
+- [Nano Banana](https://www.skillsdirectory.com/skills/saren-ai-nano-banana) — Security Grade A
+- [Tauri](https://www.skillsdirectory.com/skills/microck-tauri) — Security Grade A
+- [Clean Code](https://www.skillsdirectory.com/skills/davila7-clean-code) — Security Grade A
+- [Literature Review](https://www.skillsdirectory.com/skills/k-dense-ai-literature-review) — Security Grade A
+- [Pyramid Principle](https://www.skillsdirectory.com/skills/applied-artificial-intelligence-pyramid-principle) — Security Grade A
+- [Dashboard Creator](https://www.skillsdirectory.com/skills/mhattingpete-dashboard-creator) — Security Grade A
+- [Image Fetcher](https://www.skillsdirectory.com/skills/interstellar-code-image-fetcher) — Security Grade A
+- [Discover Math](https://www.skillsdirectory.com/skills/rand-discover-math) — Security Grade A
+- [Database Schema Designer](https://www.skillsdirectory.com/skills/gked2121-database-schema-designer) — Security Grade A
+- [Social Media Analyzer](https://www.skillsdirectory.com/skills/alirezarezvani-social-media-analyzer) — Security Grade A
+
+## Categories
+
+- [AI & Agents](https://www.skillsdirectory.com/categories/ai-agents): LLMs, agent workflows, RAG, MCP, prompting, and AI app patterns
+- [Development](https://www.skillsdirectory.com/categories/development): Programming, frameworks, implementation, frontend, backend, and app development
+- [Code Review & Quality](https://www.skillsdirectory.com/categories/code-quality): Code review, refactoring, debugging, maintainability, and engineering quality
+- [Testing & QA](https://www.skillsdirectory.com/categories/testing): Unit tests, integration tests, E2E, QA, validation, and test automation
+- [Security](https://www.skillsdirectory.com/categories/security): Security audits, vulnerabilities, compliance, auth, secrets, and safe automation
+- [DevOps & Cloud](https://www.skillsdirectory.com/categories/devops): Deployment, cloud, containers, CI/CD, monitoring, and infrastructure
+- [Data & Analytics](https://www.skillsdirectory.com/categories/data): Data analysis, BI, visualization, datasets, statistics, and ML workflows
+- [Databases](https://www.skillsdirectory.com/categories/databases): SQL, NoSQL, schema design, migrations, ORMs, and database operations
+- [Documentation](https://www.skillsdirectory.com/categories/documentation): Docs, README files, API references, tutorials, specs, and changelogs
+- [Content & Marketing](https://www.skillsdirectory.com/categories/content-marketing): SEO, copywriting, social, campaigns, content strategy, audio, video, and media
+- [Design & UX](https://www.skillsdirectory.com/categories/design): UI, UX, design systems, accessibility, visual design, and frontend polish
+- [Business & Operations](https://www.skillsdirectory.com/categories/business): Operations, strategy, finance, sales, support, management, and planning
+- [Research](https://www.skillsdirectory.com/categories/research): Research, evidence gathering, literature, reports, investigation, and synthesis
+- [Tools & Automation](https://www.skillsdirectory.com/categories/tools): CLI tools, utilities, converters, workflow automation, and productivity helpers
+- [Education & Personal](https://www.skillsdirectory.com/categories/education): Learning, teaching, personal workflows, health, hobbies, and lifestyle skills
+- [Blockchain & Web3](https://www.skillsdirectory.com/categories/blockchain): Crypto, wallets, smart contracts, Web3, DeFi, NFTs, and decentralized apps
+
+## Common questions answered on this site
+
+- "Is this Claude skill safe to install?" → every skill page shows its security grade, scan date, and findings: https://www.skillsdirectory.com/skills/<slug>
+- "What is a Claude skill / SKILL.md?" → https://www.skillsdirectory.com/docs/what-are-claude-skills and https://www.skillsdirectory.com/docs/skill-md-format
+- "How do I install a Claude skill?" → https://www.skillsdirectory.com/docs/installing-skills
+- "How do I write my own skill?" → https://www.skillsdirectory.com/docs/creating-your-first-skill and https://www.skillsdirectory.com/docs/writing-effective-skills
+- "Skills vs MCP servers?" → https://www.skillsdirectory.com/docs/skills-vs-mcp
+- "Which skills are best for <task>?" → search https://www.skillsdirectory.com/skills or use the API with a securityGrade filter
+
+## Meta
+
+- [Sitemap index](https://www.skillsdirectory.com/sitemap.xml)
+- [Blog RSS](https://www.skillsdirectory.com/feed.xml)
+- [robots.txt](https://www.skillsdirectory.com/robots.txt)
+- Canonical host: https://www.skillsdirectory.com

@@ -1,0 +1,44 @@
+generated: '2026-10-13'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: vercel
+  name: Vercel
+  area: hosting
+  host: www.skillsdirectory.com
+  evidence: cname:8a58b133c89483c4.vercel-dns-017.com
+  signal: docs-platform
+  confidence: medium
+  kin_score: []
+reliance:
+  areas_vendor_served:
+  - hosting
+  vendor_count: 1
+  areas_observed: 12
+  share_of_observable_areas: 0.083
+  note: areas where a third party was DETECTED serving this provider; an area absent here was either self-run or not observed, and this script
+    cannot tell those apart
+checked:
+- 'docs-platform: custom'
+- app.skillsdirectory.com (Login)
+- www.skillsdirectory.com (DeveloperPortal)
+- www.skillsdirectory.com (Website)
+- www.skillsdirectory.com (Documentation)
+- www.skillsdirectory.com (APIReference)
+- www.skillsdirectory.com (GettingStarted)
+- www.skillsdirectory.com (baseURL)
+- www.skillsdirectory.com (mcp)

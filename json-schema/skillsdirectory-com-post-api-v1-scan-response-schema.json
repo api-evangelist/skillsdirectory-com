@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/skillsdirectory-com/main/json-schema/skillsdirectory-com-post-api-v1-scan-response-schema.json",
+  "title": "PostApiV1ScanResponse",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/skillsdirectory-com-openapi-generated.yml#/components/schemas/PostApiV1ScanResponse",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "description": "Scan results with findings"
+    },
+    "meta": {
+      "type": "object",
+      "description": "Rate limit and tier information"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.skillsdirectory.com/api-docs
+name: Skills Directory API Rate Limits
+limit_count: 3
+summary: Per-key daily request quotas by tier, reset daily at midnight UTC. Every response carries X-RateLimit-Remaining and X-RateLimit-Tier; exhaustion returns 429 RATE_LIMIT_EXCEEDED. MCP tool calls count against the same quota.
+headers:
+- X-RateLimit-Remaining
+- X-RateLimit-Tier
+- Retry-After
+limits:
+- name: Free tier daily quota
+  scope: per-api-key
+  limit: 100
+  limit_text: 100
+  window: day (resets midnight UTC)
+  metric: request
+  exhaustion_status: 429
+- name: Pro tier daily quota
+  scope: per-api-key
+  limit: 1000
+  limit_text: 1,000
+  window: day (resets midnight UTC)
+  metric: request
+  exhaustion_status: 429
+- name: Enterprise tier daily quota
+  scope: per-api-key
+  limit: 10000
+  limit_text: 10,000
+  window: day (resets midnight UTC)
+  metric: request
+  exhaustion_status: 429

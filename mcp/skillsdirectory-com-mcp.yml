@@ -1,0 +1,29 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.skillsdirectory.com/api-docs
+status: published
+server:
+  name: skills-directory
+  transport: http
+  url: https://www.skillsdirectory.com/api/mcp
+  authentication: 'Bearer API key (Pro) — "claude mcp add --transport http skills-directory https://www.skillsdirectory.com/api/mcp --header \"Authorization: Bearer YOUR_API_KEY\""'
+deployment:
+  mode: remote
+  endpoint: https://www.skillsdirectory.com/api/mcp
+  auth: api-key
+  verified: probed
+probe: 'POST initialize without a key on 2026-10-13 answered 401 with a JSON-RPC error body; tools/list could not be read anonymously, so the tool names below are copied from the documentation page, not introspected.'
+note: Pro members only. Each tool call counts as one request against the daily API limit.
+tools:
+- name: search_skills
+  description: Search skills (documented tool name).
+- name: get_skill
+  description: Read a skill's grade and findings (documented tool name).
+- name: scan_skill
+  description: Scan the skill you are writing (documented tool name).
+- name: audit_skills
+  description: Check what you already have installed (documented tool name).
+- name: download_skill
+  description: Download a skill ZIP (documented tool name).
+- name: my_library
+  description: Access your saved library (documented tool name).

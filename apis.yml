@@ -1,0 +1,164 @@
+aid: skillsdirectory-com
+
+name: Skills Directory
+
+image: https://www.skillsdirectory.com/og-image.png
+
+description: Skills Directory (skillsdirectory.com) is a security-first directory of agent skills for Claude, Claude Code and other coding agents.
+  It indexes over 100,000 skills, scans each one automatically for credential reads, network exfiltration, unpinned remote code and prompt-injection
+  vectors, and publishes a public A-F security grade. It offers a key-authenticated REST API (v1) for listing, searching and scanning skills,
+  a public Registry API for CLI installers, live security-grade badges, and a hosted MCP server for Claude Code for Pro members.
+
+url: https://raw.githubusercontent.com/api-evangelist/skillsdirectory-com/refs/heads/main/apis.yml
+
+x-type: company
+
+x-source: request
+
+specificationVersion: '0.20'
+
+created: '2026-10-13'
+
+modified: '2026-10-13'
+
+tags:
+- Agent Skills
+- AI Agents
+- Claude
+- Directory
+- Security Scanning
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+
+common:
+- type: RateLimits
+  url: rate-limits/skillsdirectory-com-rate-limits.yml
+- type: Plans
+  url: plans/skillsdirectory-com-plans-pricing.yml
+- type: Authentication
+  url: authentication/skillsdirectory-com-authentication.yml
+- type: ErrorCatalog
+  url: errors/skillsdirectory-com-problem-types.yml
+- type: Spectral
+  url: rules/skillsdirectory-com-rules.yml
+- type: JSONLD
+  url: json-ld/skillsdirectory-com-context.jsonld
+- type: Vocabulary
+  url: vocabulary/skillsdirectory-com-vocabulary.yml
+- type: DataModel
+  url: data-model/skillsdirectory-com-data-model.yml
+- type: Conformance
+  url: conformance/skillsdirectory-com-conformance.yml
+- type: LLMsTxt
+  url: llms/skillsdirectory-com-llms.txt
+- type: Hosts
+  url: hosts/skillsdirectory-com-hosts.yml
+- type: Vendors
+  url: vendors/skillsdirectory-com-vendors.yml
+- type: Security
+  url: https://www.skillsdirectory.com/security
+- type: Login
+  url: https://app.skillsdirectory.com/sign-in
+- type: GitHubOrganization
+  url: https://github.com/aggarcinuno
+- type: DeveloperPortal
+  url: https://www.skillsdirectory.com/skills/for/developers
+- type: VulnerabilityDisclosure
+  url: security/skillsdirectory-com-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/skillsdirectory-com-domain-security.yml
+- type: Website
+  url: https://www.skillsdirectory.com/
+- type: Documentation
+  url: https://www.skillsdirectory.com/docs
+- type: APIReference
+  url: https://www.skillsdirectory.com/api-docs
+- type: GettingStarted
+  url: https://www.skillsdirectory.com/docs/getting-started
+- type: MCPServer
+  url: https://www.skillsdirectory.com/api/mcp
+- type: LLMsTxt
+  url: https://www.skillsdirectory.com/llms.txt
+- type: Pricing
+  url: https://www.skillsdirectory.com/pro
+- type: Blog
+  url: https://www.skillsdirectory.com/blog
+- type: TermsOfService
+  url: https://www.skillsdirectory.com/terms
+- type: PrivacyPolicy
+  url: https://www.skillsdirectory.com/privacy
+- type: About
+  url: https://www.skillsdirectory.com/about
+- type: Sitemap
+  url: https://www.skillsdirectory.com/sitemap.xml
+- type: RobotsTxt
+  url: https://www.skillsdirectory.com/robots.txt
+
+apis:
+- aid: skillsdirectory-com:skills-directory-api
+  name: Skills Directory API
+  description: Key-authenticated REST API (v1) to list, search (including Pro semantic search) and retrieve agent skills with their security grades,
+    list categories, read key usage statistics, and scan a skill (ZIP, SKILL.md text or GitHub URL) for a security grade in CI. Free 100 requests/day,
+    Pro 1,000, Enterprise 10,000. No machine-readable contract is published.
+  humanURL: https://www.skillsdirectory.com/api-docs
+  baseURL: https://www.skillsdirectory.com/api/v1
+  tags:
+  - Agent Skills
+  - Security Scanning
+  properties:
+  - type: Documentation
+    url: https://www.skillsdirectory.com/api-docs
+  - type: APIReference
+    url: https://www.skillsdirectory.com/api-docs
+- aid: skillsdirectory-com:registry-api
+  name: Skills Directory Registry API
+  description: Public, unauthenticated JSON API for CLI tools (designed for openskills) to list, search and fetch skills from the Skills Directory
+    registry.
+  humanURL: https://www.skillsdirectory.com/docs/registry-api
+  baseURL: https://www.skillsdirectory.com/api/registry
+  tags:
+  - Agent Skills
+  - Registry
+  properties:
+  - type: Documentation
+    url: https://www.skillsdirectory.com/docs/registry-api
+- aid: skillsdirectory-com:skillsdirectory-com-api
+  name: Skills Directory API
+  description: 'Skills Directory API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-13);
+
+    not the provider''s own document.'
+  humanURL: https://www.skillsdirectory.com/docs/registry-api
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/skillsdirectory-com-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-request-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-v1-skills-slug-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-13'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://api.skillsdirectory.com/api/mcp
+    status: 401
+  - url: https://www.skillsdirectory.com/api/mcp
+    status: 401
+  - url: https://www.skillsdirectory.com/
+    status: 200

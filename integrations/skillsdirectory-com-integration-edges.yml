@@ -1,0 +1,22 @@
+generated: '2026-10-13'
+method: none
+source:
+- https://zapier.com/apps/skillsdirectory-com/integrations
+- https://zapier.com/apps/skillsdirectory/integrations
+- https://zapier.com/apps/skills-directory/integrations
+- https://n8n.io/integrations/skillsdirectory-com/
+- https://n8n.io/integrations/skillsdirectory/
+- https://composio.dev/toolkits/skillsdirectory-com
+- https://monid.ai/tools/skillsdirectory-com
+checked:
+- https://composio.dev/toolkits/skillsdirectory-com
+- https://monid.ai/tools/skillsdirectory-com
+- https://n8n.io/integrations/skillsdirectory-com/
+- https://n8n.io/integrations/skillsdirectory/
+- https://zapier.com/apps/skills-directory/integrations
+- https://zapier.com/apps/skillsdirectory-com/integrations
+- https://zapier.com/apps/skillsdirectory/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

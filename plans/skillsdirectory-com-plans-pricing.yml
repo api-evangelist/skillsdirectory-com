@@ -1,0 +1,36 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.skillsdirectory.com/api-docs
+name: Skills Directory API Plans
+docs:
+- https://www.skillsdirectory.com/pro
+plan_count: 3
+currency: USD
+audience: developer-api
+pricing_basis: tiered-subscription
+published: true
+summary: >-
+  The API documentation lists three tiers by daily request quota. The Pro page sells the Pro membership
+  (API key, MCP server, ZIP downloads, CI scanning) at a founding price of $9/month, shown against a struck $19.
+plans:
+- id: free
+  name: Free
+  price: 0
+  price_text: $0
+  currency: USD
+  included: 100 requests/day
+- id: pro
+  name: Pro
+  price: 9
+  price_text: With Pro, $9/mo
+  currency: USD
+  period: month
+  included: 1,000 requests/day; semantic search; scan endpoint; MCP server
+  note: Pro page shows "$9 / month $19" as a founding price for the first 50 members.
+- id: enterprise
+  name: Enterprise
+  price: 199
+  price_text: $199/mo
+  currency: USD
+  period: month
+  included: 10,000 requests/day

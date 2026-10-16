@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "@vocab": "https://skillsdirectory.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "skillsdirectory": "https://skillsdirectory.com/schema#",
+    "GetApiRegistryResponse": "skillsdirectory:GetApiRegistryResponse",
+    "registry": {
+      "@id": "skillsdirectory:registry",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "skillsdirectory:version",
+      "@type": "xsd:string"
+    },
+    "skills": {
+      "@id": "skillsdirectory:skills",
+      "@container": "@list"
+    },
+    "pagination": {
+      "@id": "skillsdirectory:pagination"
+    },
+    "GetApiRegistrySlugResponse": "skillsdirectory:GetApiRegistrySlugResponse",
+    "skill": {
+      "@id": "skillsdirectory:skill"
+    },
+    "PostApiV1ScanRequest": "skillsdirectory:PostApiV1ScanRequest",
+    "zip": {
+      "@id": "skillsdirectory:zip",
+      "@type": "xsd:string"
+    },
+    "content": {
+      "@id": "skillsdirectory:content",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "skillsdirectory:url",
+      "@type": "xsd:string"
+    },
+    "PostApiV1ScanResponse": "skillsdirectory:PostApiV1ScanResponse",
+    "data": {
+      "@id": "skillsdirectory:data"
+    },
+    "meta": {
+      "@id": "skillsdirectory:meta"
+    },
+    "GetApiV1SkillsSlugResponse": "skillsdirectory:GetApiV1SkillsSlugResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Skills Directory API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Skills Directory's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-13) from openapi/_ae-authored/skillsdirectory-com-openapi-generated.yml.",
+  "dcterms:created": "2026-10-13",
+  "dcterms:source": [
+    "openapi/_ae-authored/skillsdirectory-com-openapi-generated.yml"
+  ]
+}

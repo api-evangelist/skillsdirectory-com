@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/skillsdirectory-com/main/json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json",
+  "title": "GetApiRegistrySlugResponse",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/skillsdirectory-com-openapi-generated.yml#/components/schemas/GetApiRegistrySlugResponse",
+  "type": "object",
+  "properties": {
+    "registry": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "skill": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.skillsdirectory.com/api-docs
+summary:
+  types:
+  - apiKey
+  - http-bearer
+  api_key_in:
+  - header
+  oauth2_flows: []
+  bearer: true
+  credential_classes: 1
+  headline: All /api/v1 requests require an sk_live_ API key sent as Authorization Bearer or x-api-key; the Registry API (/api/registry) is public. Live probe returned 401 MISSING_API_KEY with WWW-Authenticate Bearer realm="skillsdirectory".
+schemes:
+- name: BearerKey
+  type: http
+  scheme: bearer
+  description: 'Authorization: Bearer sk_live_...'
+- name: ApiKeyHeader
+  type: apiKey
+  in: header
+  parameter: x-api-key
+  description: Same key as the bearer scheme.
