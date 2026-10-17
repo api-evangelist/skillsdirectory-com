@@ -1,0 +1,61 @@
+openapi: 3.2.0
+info:
+  title: Skills Directory Categories API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 5 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Skills Directory has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 1
+    pages-with-code: 2
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://www.skillsdirectory.com/docs/registry-api
+  - https://www.skillsdirectory.com/api-docs
+  - https://www.skillsdirectory.com/docs/skill-md-format
+servers:
+- url: https://www.skillsdirectory.com
+  description: Production (as shown in the curl examples on the documentation page)
+security:
+- bearer: []
+tags:
+- name: Categories
+paths:
+  /api/v1/categories:
+    get:
+      operationId: listCategories
+      summary: List all skill categories
+      tags:
+      - Categories
+      parameters: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1SkillsSlugResponse'
+      x-source: https://www.skillsdirectory.com/api-docs
+      x-evidence:
+        kind: documentation
+        repaired: '2026-10-13: generator collapsed distinct documented paths into /api/v1/{v1id}; split back to the paths listed verbatim on the page'
+components:
+  schemas:
+    GetApiV1SkillsSlugResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          description: Skill details
+        meta:
+          type: object
+          description: Rate limit and tier information
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

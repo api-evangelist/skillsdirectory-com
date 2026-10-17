@@ -1,0 +1,137 @@
+openapi: 3.2.0
+info:
+  title: Skills Directory Registry API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 5 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Skills Directory has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 1
+    pages-with-code: 2
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://www.skillsdirectory.com/docs/registry-api
+  - https://www.skillsdirectory.com/api-docs
+  - https://www.skillsdirectory.com/docs/skill-md-format
+servers:
+- url: https://www.skillsdirectory.com
+  description: Production (as shown in the curl examples on the documentation page)
+security:
+- bearer: []
+tags:
+- name: Registry
+paths:
+  /api/registry:
+    get:
+      operationId: get_api_registry
+      tags:
+      - Registry
+      summary: GET /api/registry
+      x-source: https://www.skillsdirectory.com/docs/registry-api
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiRegistryResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl \"https://www.skillsdirectory.com/api/registry?q=git&limit=10\"\n Example Response \n {\n \"registry\": \"skillsdirectory\",\n \"version\": \"1.0.0\",\n \"skills\": [\n {\n \"name\": \"Git Commit Helper\",\n \"slug\": \"git-commit-helper\",\n \"description\": \"Helps write better commit messages following conventional commits\",\n \"repository\": \"username/repo-name\",\n \"category\": \"development\",\n \"author\": \"username\",\n \"stars\":"
+  /api/registry/{slug}:
+    get:
+      operationId: get_api_registry_slug
+      tags:
+      - Registry
+      summary: Returns detailed information about a specific skill
+      x-source: https://www.skillsdirectory.com/docs/registry-api
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiRegistrySlugResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetApiRegistrySlugResponse:
+      type: object
+      properties:
+        registry:
+          type: string
+        version:
+          type: string
+        skill:
+          type: object
+    GetApiRegistryResponse:
+      type: object
+      properties:
+        registry:
+          type: string
+        version:
+          type: string
+        skills:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              slug:
+                type: string
+              description:
+                type: string
+              repository:
+                type: string
+              category:
+                type: string
+              author:
+                type: string
+              stars:
+                type: integer
+              verified:
+                type: boolean
+              tags:
+                type: array
+                items:
+                  type: string
+        pagination:
+          type: object
+          properties:
+            total:
+              type: integer
+            limit:
+              type: integer
+            offset:
+              type: integer
+            hasMore:
+              type: boolean
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -1,0 +1,173 @@
+openapi: 3.2.0
+info:
+  title: Directory Skills API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 5 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Skills Directory has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 1
+    pages-with-code: 2
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://www.skillsdirectory.com/docs/registry-api
+  - https://www.skillsdirectory.com/api-docs
+  - https://www.skillsdirectory.com/docs/skill-md-format
+servers:
+- url: https://www.skillsdirectory.com
+  description: Production (as shown in the curl examples on the documentation page)
+security:
+- bearer: []
+tags:
+- name: Skills
+paths:
+  /api/v1/skills/{slug}:
+    get:
+      operationId: get_api_v1_skills_slug
+      tags:
+      - Skills
+      summary: Get a single skill by its slug
+      x-source: https://www.skillsdirectory.com/api-docs
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1SkillsSlugResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/skills:
+    get:
+      operationId: listSkills
+      summary: List skills with filtering, sorting, and pagination
+      tags:
+      - Skills
+      parameters:
+      - in: query
+        name: q
+        required: false
+        schema:
+          type: string
+        description: Search by name or description
+      - in: query
+        name: category
+        required: false
+        schema:
+          type: string
+        description: Filter by category slug
+      - in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+        description: recent | votes | stars
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        description: Results per page (max 100)
+      - in: query
+        name: offset
+        required: false
+        schema:
+          type: integer
+        description: Pagination offset
+      - in: query
+        name: verified
+        required: false
+        schema:
+          type: boolean
+        description: Filter verified skills only
+      - in: query
+        name: securityGrade
+        required: false
+        schema:
+          type: string
+        description: 'Max grade (A-F, default: A, ''all'' to disable)'
+      - in: query
+        name: minSecurityScore
+        required: false
+        schema:
+          type: integer
+        description: Minimum security score (0-100)
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1SkillsSlugResponse'
+      x-source: https://www.skillsdirectory.com/api-docs
+      x-evidence:
+        kind: documentation
+        repaired: '2026-10-13: generator collapsed distinct documented paths into /api/v1/{v1id}; split back to the paths listed verbatim on the page'
+  /api/v1/skills/search:
+    get:
+      operationId: searchSkills
+      summary: Semantic search using AI embeddings. Requires Pro or Enterprise tier
+      tags:
+      - Skills
+      parameters:
+      - in: query
+        name: q
+        required: true
+        schema:
+          type: string
+        description: Search query
+      - in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        description: Max results (default 20, max 100)
+      - in: query
+        name: category
+        required: false
+        schema:
+          type: string
+        description: Filter by category
+      - in: query
+        name: threshold
+        required: false
+        schema:
+          type: number
+        description: Min similarity (0-1, default 0.5)
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1SkillsSlugResponse'
+      x-source: https://www.skillsdirectory.com/api-docs
+      x-evidence:
+        kind: documentation
+        repaired: '2026-10-13: generator collapsed distinct documented paths into /api/v1/{v1id}; split back to the paths listed verbatim on the page'
+components:
+  schemas:
+    GetApiV1SkillsSlugResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          description: Skill details
+        meta:
+          type: object
+          description: Rate limit and tier information
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

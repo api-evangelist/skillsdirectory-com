@@ -101,9 +101,11 @@ common:
 apis:
 - aid: skillsdirectory-com:skills-directory-api
   name: Skills Directory API
-  description: Key-authenticated REST API (v1) to list, search (including Pro semantic search) and retrieve agent skills with their security grades,
-    list categories, read key usage statistics, and scan a skill (ZIP, SKILL.md text or GitHub URL) for a security grade in CI. Free 100 requests/day,
-    Pro 1,000, Enterprise 10,000. No machine-readable contract is published.
+  description: >-
+    Key-authenticated REST API (v1) to list, search (including Pro semantic search) and retrieve agent
+    skills with their security grades, list categories, read key usage statistics, and scan a skill (ZIP,
+    SKILL.md text or GitHub URL) for a security grade in CI. Free 100 requests/day, Pro 1,000, Enterprise
+    10,000. No machine-readable contract is published.
   humanURL: https://www.skillsdirectory.com/api-docs
   baseURL: https://www.skillsdirectory.com/api/v1
   tags:
@@ -116,8 +118,9 @@ apis:
     url: https://www.skillsdirectory.com/api-docs
 - aid: skillsdirectory-com:registry-api
   name: Skills Directory Registry API
-  description: Public, unauthenticated JSON API for CLI tools (designed for openskills) to list, search and fetch skills from the Skills Directory
-    registry.
+  description: >-
+    Public, unauthenticated JSON API for CLI tools (designed for openskills) to list, search and fetch
+    skills from the Skills Directory registry.
   humanURL: https://www.skillsdirectory.com/docs/registry-api
   baseURL: https://www.skillsdirectory.com/api/registry
   tags:
@@ -126,16 +129,16 @@ apis:
   properties:
   - type: Documentation
     url: https://www.skillsdirectory.com/docs/registry-api
-- aid: skillsdirectory-com:skillsdirectory-com-api
-  name: Skills Directory API
-  description: 'Skills Directory API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-13);
-
-    not the provider''s own document.'
-  humanURL: https://www.skillsdirectory.com/docs/registry-api
+- aid: skillsdirectory-com:skillsdirectory-com-categories-api
+  name: Skills Directory Categories API
+  description: The Categories API from Skills Directory — 1 operation(s) for categories.
+  humanURL: https://www.skillsdirectory.com/api-docs
+  baseURL: https://www.skillsdirectory.com/api/v1
+  tags:
+  - Categories
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/skillsdirectory-com-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/skillsdirectory-com-categories-api-openapi.yml
   - type: JSONSchema
     url: json-schema/skillsdirectory-com-get-api-registry-response-schema.json
   - type: JSONSchema
@@ -146,7 +149,86 @@ apis:
     url: json-schema/skillsdirectory-com-get-api-v1-skills-slug-response-schema.json
   - type: JSONSchema
     url: json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json
-
+- aid: skillsdirectory-com:skillsdirectory-com-registry-api
+  name: Skills Directory Registry API
+  description: The Registry API from Skills Directory — 2 operation(s) for registry.
+  humanURL: https://www.skillsdirectory.com/api-docs
+  baseURL: https://www.skillsdirectory.com/api/v1
+  tags:
+  - Registry
+  properties:
+  - type: OpenAPI
+    url: openapi/skillsdirectory-com-registry-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-request-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-v1-skills-slug-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json
+- aid: skillsdirectory-com:skillsdirectory-com-scan-api
+  name: Skills Directory Scan API
+  description: The Scan API from Skills Directory — 1 operation(s) for scan.
+  humanURL: https://www.skillsdirectory.com/api-docs
+  baseURL: https://www.skillsdirectory.com/api/v1
+  tags:
+  - Scan
+  properties:
+  - type: OpenAPI
+    url: openapi/skillsdirectory-com-scan-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-request-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-v1-skills-slug-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json
+- aid: skillsdirectory-com:skillsdirectory-com-skills-api
+  name: Skills Directory Skills API
+  description: The Skills API from Skills Directory — 3 operation(s) for skills.
+  humanURL: https://www.skillsdirectory.com/api-docs
+  baseURL: https://www.skillsdirectory.com/api/v1
+  tags:
+  - Skills
+  properties:
+  - type: OpenAPI
+    url: openapi/skillsdirectory-com-skills-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-request-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-v1-skills-slug-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json
+- aid: skillsdirectory-com:skillsdirectory-com-stats-api
+  name: Skills Directory Stats API
+  description: The Stats API from Skills Directory — 1 operation(s) for stats.
+  humanURL: https://www.skillsdirectory.com/api-docs
+  baseURL: https://www.skillsdirectory.com/api/v1
+  tags:
+  - Stats
+  properties:
+  - type: OpenAPI
+    url: openapi/skillsdirectory-com-stats-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-request-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-post-api-v1-scan-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-v1-skills-slug-response-schema.json
+  - type: JSONSchema
+    url: json-schema/skillsdirectory-com-get-api-registry-slug-response-schema.json
 x-coverage:
   state: gated
   reason: partner-login

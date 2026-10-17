@@ -1,0 +1,35 @@
+{
+  "provider": "skillsdirectory-com",
+  "sources": [
+    "_ae-authored/skillsdirectory-com-openapi-generated.yml"
+  ],
+  "outputs": [
+    "skillsdirectory-com-categories-api-openapi.yml",
+    "skillsdirectory-com-registry-api-openapi.yml",
+    "skillsdirectory-com-scan-api-openapi.yml",
+    "skillsdirectory-com-skills-api-openapi.yml",
+    "skillsdirectory-com-stats-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "skillsdirectory-com-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/registry -> Registry",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/registry/{slug} -> Registry",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths POST /api/v1/scan -> Scan",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/v1/skills/{slug} -> Skills",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/v1/skills -> Skills",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/v1/skills/search -> Skills",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/v1/categories -> Categories",
+    "skillsdirectory-com-openapi-generated.yml: tagged paths GET /api/v1/stats -> Stats",
+    "skillsdirectory-com-openapi-generated.yml: declared missing tag: Categories",
+    "skillsdirectory-com-openapi-generated.yml: declared missing tag: Registry",
+    "skillsdirectory-com-openapi-generated.yml: declared missing tag: Scan",
+    "skillsdirectory-com-openapi-generated.yml: declared missing tag: Skills",
+    "skillsdirectory-com-openapi-generated.yml: declared missing tag: Stats",
+    "apis.yml register: written (+5 apis, 7 total)"
+  ],
+  "skipped": []
+}
