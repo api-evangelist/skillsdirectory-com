@@ -175,6 +175,8 @@ apis:
   humanURL: https://www.skillsdirectory.com/api-docs
   baseURL: https://www.skillsdirectory.com/api/v1
   tags:
+  - Scans
+  tags_raw:
   - Scan
   properties:
   - type: OpenAPI
